@@ -4,12 +4,18 @@ package org.app;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
 
         Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost/PizzaShopDB", "postgres", "12345");
+
+        Statement statement = connection.createStatement();
+        String pizzaTypeName="Bacon";
+
+        statement.executeUpdate("INSERT INTO  pizza_type(name,id,price) VALUES('"+pizzaTypeName+"',117,4900)");
 
         Scanner scanner = new Scanner(System.in);
 
