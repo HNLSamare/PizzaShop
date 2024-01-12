@@ -16,12 +16,12 @@ public class Main {
             int id = scanner.nextInt();
 
             System.out.println("Enter Name: ");
-            String pizzaName = scanner.next();
+            String name = scanner.next();
 
             System.out.println("Enter Price: ");
             float price = scanner.nextFloat();
 
-            System.out.printf("Pizza ID is %d , pizza name is %s  and the price is %.2f \n\n", id, pizzaName, price);
+            System.out.printf("Pizza ID is %d , pizza name is %s  and the price is %.2f \n\n", id, name, price);
 
         }
 
