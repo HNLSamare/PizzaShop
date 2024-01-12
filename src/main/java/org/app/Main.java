@@ -13,9 +13,6 @@ public class Main {
         Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost/PizzaShopDB", "postgres", "12345");
 
         Statement statement = connection.createStatement();
-        String pizzaTypeName="Bacon";
-
-        statement.executeUpdate("INSERT INTO  pizza_type(name,id,price) VALUES('"+pizzaTypeName+"',117,4900)");
 
         Scanner scanner = new Scanner(System.in);
 
@@ -35,6 +32,8 @@ public class Main {
 
             System.out.printf("Pizza ID is %d , pizza name is %s  and the price is %.2f \n\n", id, name, price);
 
+            // updating the sql table
+            statement.executeUpdate("INSERT INTO  pizza_type(name,id,price) VALUES('" + name + "'," + id + "," + price + ")");
         }
 
     }
