@@ -1,10 +1,16 @@
 package org.app;
 
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
+
+        Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost/PizzaShopDB", "postgres", "12345");
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("How many types of Pizzas you are going to add?: ");
