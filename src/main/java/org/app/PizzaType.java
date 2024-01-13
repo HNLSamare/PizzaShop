@@ -1,0 +1,38 @@
+package org.app;
+
+public class PizzaType {
+    public int id;
+    private String name;
+    private float price;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public String getPrintableDescription() {
+        return "Name:" +name+",Pizza ID:" +id+ "and the price is:"+price;
+
+    }
+
+
+}

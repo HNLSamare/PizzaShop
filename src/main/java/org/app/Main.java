@@ -30,11 +30,20 @@ public class Main {
             System.out.println("Enter Price: ");
             float price = scanner.nextFloat();
 
-            System.out.printf("Pizza ID is %d , pizza name is %s  and the price is %.2f \n\n", id, name, price);
+            // creating object for PizzaType class
+            PizzaType userGivenPizzaType = new PizzaType();
+            userGivenPizzaType.setId(id);
+            userGivenPizzaType.setName(name);
+            userGivenPizzaType.setPrice(price);
+            userGivenPizzaType.getPrintableDescription();
+            System.out.println(userGivenPizzaType.getPrintableDescription());
+
 
             // updating the sql table
             statement.executeUpdate("INSERT INTO  pizza_type(name,id,price) VALUES('" + name + "'," + id + "," + price + ")");
+
         }
+
 
     }
 }
