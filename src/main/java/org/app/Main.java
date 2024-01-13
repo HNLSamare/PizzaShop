@@ -9,10 +9,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
+        PizzaTypeRepository repository = new PizzaTypeRepository();
 
-        Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost/PizzaShopDB", "postgres", "12345");
-
-        Statement statement = connection.createStatement();
 
         Scanner scanner = new Scanner(System.in);
 
@@ -38,9 +36,8 @@ public class Main {
             userGivenPizzaType.getPrintableDescription();
             System.out.println(userGivenPizzaType.getPrintableDescription());
 
+            repository.addNewPizzaTypeToDb(name, id, price);
 
-            // updating the sql table
-            statement.executeUpdate("INSERT INTO  pizza_type(name,id,price) VALUES('" + name + "'," + id + "," + price + ")");
 
         }
 
