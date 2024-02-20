@@ -33,7 +33,6 @@ public class Main {
             userGivenPizzaType.setId(id);
             userGivenPizzaType.setName(name);
             userGivenPizzaType.setPrice(price);
-            userGivenPizzaType.getPrintableDescription();
             System.out.println(userGivenPizzaType.getPrintableDescription());
 
             repository.addNewPizzaTypeToDb(name, id, price);
