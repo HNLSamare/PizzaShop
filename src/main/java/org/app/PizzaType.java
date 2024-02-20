@@ -1,7 +1,7 @@
 package org.app;
 
 public class PizzaType {
-    public int id;
+    private int id;
     private String name;
     private float price;
 
@@ -30,7 +30,7 @@ public class PizzaType {
     }
 
     public String getPrintableDescription() {
-        return "Name:" +name+",Pizza ID:" +id+ "and the price is:"+price;
+        return "Name:" +name+",Pizza ID:" +id+ " and the price is:"+price;
 
     }
 
